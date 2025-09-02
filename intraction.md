@@ -576,3 +576,12 @@ kubeadm join 172.31.16.30:6443 --token 582izh.q31vbe6d3m996ram \
 	kubectl create deployment nginx --image=sarowaralam/sarowar-nginx --replicas=3
 	kubectl expose deployment nginx --port=80 --type=NodePort
 </pre>
+# Check pods, Deployment,services
+<pre>
+kubectl get pods
+kubectl get deployment
+kubectl get services
+	
+</pre>
+
+
