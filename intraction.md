@@ -604,7 +604,9 @@ cd /var/www/html
 
 php artisan serve --host=0.0.0.0 --port=8000
 </pre
+	
 # Deployment bellow 
+
 <pre>
 	kubectl create deployment salesinventory --image=ashraful90/salesinventory --replicas=3
 	kubectl expose deployment salesinventory --port=8000 --type=NodePort
