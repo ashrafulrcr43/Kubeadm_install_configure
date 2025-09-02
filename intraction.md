@@ -619,6 +619,13 @@ php artisan serve --host=0.0.0.0 --port=8000
 	php artisan serve
 </pre>
 	
+# Trobuleshout 
+<pre>
+	kubectl describe node ip-172-31-16-30
+
+	# pods Delete 
+	kubectl delete pod nginx-55d5796cf7-d82vs
 	
+</pre>
 
 
