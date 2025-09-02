@@ -557,3 +557,22 @@ main() {
 main "$@"
 	
 </pre>
+
+# join worker server 
+<pre>
+	you get link from master server 
+	
+kubeadm join 172.31.16.30:6443 --token 582izh.q31vbe6d3m996ram \
+        --discovery-token-ca-cert-hash sha256:a6dd02b76686fbd4d8d9cf3167822167bda7d7dd4ceda9e9046899d7ad5daad6
+	
+</pre>
+
+# check the master server nodes
+<pre>
+	kubectl get nodes
+</pre>
+# Deploy ngnix image to master server 
+<pre>
+	kubectl create deployment nginx --image=sarowaralam/sarowar-nginx --replicas=3
+	kubectl expose deployment nginx --port=80 --type=NodePort
+</pre>
