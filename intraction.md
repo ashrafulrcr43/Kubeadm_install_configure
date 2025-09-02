@@ -583,5 +583,38 @@ kubectl get deployment
 kubectl get services
 	
 </pre>
+# Laravel Project Deployment 
+<pre>
+	project Requirement:
+	docker pull ashraful90/salesinventory
 
+run
+
+docker run -d -p 8000:8000 --name salesinventory ashraful90/salesinventory
+
+docker ps
+
+docker exec -it be53e8ebb6db bash
+
+ls -la /var/www/html
+
+6 .Enter source and run
+
+cd /var/www/html
+
+php artisan serve --host=0.0.0.0 --port=8000
+</pre
+# Deployment bellow 
+<pre>
+	kubectl create deployment salesinventory --image=ashraful90/salesinventory --replicas=3
+	kubectl expose deployment salesinventory --port=8000 --type=NodePort
+
+	kubectl get svc
+	# Collect Svc PortNumber 
+	
+	kubectl get pods
+	kubectl exec -it <pod-name> -- bash
+	php artisan serve
+	
+</pre>
 
