@@ -615,6 +615,8 @@ php artisan serve --host=0.0.0.0 --port=8000
 	kubectl get pods
 	kubectl exec -it <pod-name> -- bash
 	php artisan serve
-	
 </pre>
+	
+	
+
 
