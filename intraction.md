@@ -628,4 +628,21 @@ php artisan serve --host=0.0.0.0 --port=8000
 	
 </pre>
 
+# kubeadm reset 
+<pre>
+	sudo kubeadm reset -f
 
+sudo rm -rf /etc/cni/net.d
+sudo ip link delete cni0 2>/dev/null
+sudo ip link delete flannel.1 2>/dev/null
+sudo ip link delete weave 2>/dev/null
+
+sudo apt-get purge -y kubeadm kubectl kubelet kubernetes-cni kube* 
+sudo apt-get autoremove -y
+
+sudo rm -rf ~/.kube
+sudo rm -rf /var/lib/etcd
+sudo rm -rf /var/lib/kubelet
+sudo rm -rf /etc/kubernetes
+
+</pre>
