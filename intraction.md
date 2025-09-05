@@ -646,3 +646,17 @@ sudo rm -rf /var/lib/kubelet
 sudo rm -rf /etc/kubernetes
 
 </pre>
+# Problem Ip Change Trobuleshoot
+<pre>
+	kubectl config view --minify | grep server:
+	kubectl config get-clusters
+	** my putput = kubernetes
+	kubectl config set-cluster <cluster-name> --server=https://192.168.10.169:6443
+
+</pre>
+# Trouleshot Connection Refues
+<pre>
+	ls -l ~/.kube/config
+   ubectl config get-contexts
+  kubectl config current-context
+</pre>
