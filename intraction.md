@@ -566,6 +566,24 @@ kubeadm join 172.31.16.30:6443 --token 582izh.q31vbe6d3m996ram \
         --discovery-token-ca-cert-hash sha256:a6dd02b76686fbd4d8d9cf3167822167bda7d7dd4ceda9e9046899d7ad5daad6
 	
 </pre>
+# Problem joing Worker nodes 
+<pre>
+sudo systemctl stop kubelet
+sudo systemctl stop containerd     
+sudo kubeadm reset -f
+
+sudo rm -rf /etc/kubernetes
+sudo rm -rf /var/lib/kubelet
+sudo rm -rf /var/lib/cni
+sudo rm -rf /etc/cni/net.d
+sudo rm -rf /var/lib/kubelet/pods/*
+
+sudo systemctl start containerd   # or docker
+sudo systemctl start kubelet
+
+	** Now join ** 
+
+</pre>
 
 # check the master server nodes
 <pre>
