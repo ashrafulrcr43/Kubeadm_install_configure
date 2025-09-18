@@ -675,6 +675,6 @@ sudo rm -rf /etc/kubernetes
 # Trouleshot Connection Refues
 <pre>
 	ls -l ~/.kube/config
-   ubectl config get-contexts
+   kubectl config get-contexts
   kubectl config current-context
 </pre>
